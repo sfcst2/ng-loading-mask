@@ -1,5 +1,5 @@
-<div class="loading-mask">  
-  <div>
+<div [ngClass]="loadingClass">  
+  <div class="loading-container">
     <sk-rotating-plane></sk-rotating-plane>
     <span>{{loadingMessage}}</span>
   </div>

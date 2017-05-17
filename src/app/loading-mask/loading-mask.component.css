@@ -1,19 +1,34 @@
-.loading-mask{
+.body-loading-mask{
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 0, 0, .5);
-    display: flex;
-    flex-direction: column;    
-    align-items: center;        
+    background-color: rgba(32,39,42,.5);   
     padding: 0;
     margin: 0;
     position: absolute;    
     top: 0;
     left: 0; 
+    display:flex;
+    align-items: center;
 }
 
-.loading-mask > * {
-    position: relative;
-    top: 50%;
+.loading-container{
+    display:flex;
+    flex-direction: column;    
+    align-items: center;       
+    justify-content: center;
+    flex:1;
+}
+
+.loading-container > * {    
     flex: 1;
+}
+
+.element-loading-mask{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, .5);
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;            
 }

@@ -12,8 +12,10 @@ export class LoadingMaskComponent implements OnInit, AfterViewInit {
 
   @Input('appendTo')
   appendTo: string;
-  
+
   container: any;
+
+  loadingClass:string = 'element-loading-mask';
 
   constructor(public el: ElementRef) { }
 
@@ -23,10 +25,12 @@ export class LoadingMaskComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.container = this.el.nativeElement.children[0];
     if (this.appendTo) {
-      if (this.appendTo === 'body')
+      if (this.appendTo === 'body'){
+        this.loadingClass = 'body-loading-mask';
         document.body.appendChild(this.container);
-      else
+      }else{
         this.appendChild(this.container, this.appendTo);
+      }      
     }
   }
 
